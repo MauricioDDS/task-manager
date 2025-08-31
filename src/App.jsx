@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { Task } from "./components/Task";
-import { CreateTask } from "./components/CreateTask";
+import { SuperTask } from "./components/SuperTask";
 
 function App() {
   return (
@@ -10,24 +9,15 @@ function App() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          flexDirection: "column",
+          gap: 1,
+          minHeight: "100vh",
+          bgcolor : '#101316'
         }}>
-        <Typography variant="h1" sx={{ my: 4, textAlign: "center" }}>
+        <Typography variant="h1" sx={{ my: 4, textAlign: "center"}}>
           ⚡ Task Manager ⚡
         </Typography>
-      </Box>
-      <Box>
-        <CreateTask />
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 1,
-        }}>
-        <Task />
-        <Task />
+        <SuperTask />
       </Box>
     </>
   );

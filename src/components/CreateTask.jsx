@@ -7,10 +7,12 @@ export function CreateTask() {
       sx={{
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-between",
+        gap: 2,
+        px: 2,
       }}>
-        <Button variant="contained" color="secondary">Create Task⚡</Button>
-      <SearchAppBar />
+        <Button variant="contained" color="primary">New Task</Button>
+      <SearchAppBar/>
     </Box>
   );
 }

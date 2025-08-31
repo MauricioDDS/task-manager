@@ -17,6 +17,9 @@ const theme = createTheme({
       // dark: will be calculated from palette.secondary.main,
       contrastText: "#47008F",
     },
+    text: {
+      primary: "#ffffff"
+    }
   },
   typography: {
     fontFamily: '"Helvetica Neue", Arial, sans-serif',
