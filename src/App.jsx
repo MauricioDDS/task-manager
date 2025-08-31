@@ -14,7 +14,7 @@ function App() {
           minHeight: "100vh",
           bgcolor : '#101316'
         }}>
-        <Typography variant="h1" sx={{ my: 4, textAlign: "center"}}>
+        <Typography variant="h1" sx={{ my: 4, textAlign: "center", color: "white" }}>
           ⚡ Task Manager ⚡
         </Typography>
         <SuperTask />

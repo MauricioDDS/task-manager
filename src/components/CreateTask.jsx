@@ -1,7 +1,8 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import SearchAppBar from "./SearchAppBar";
+import NewTaskForm from "./NewTaskForm";
 
-export function CreateTask() {
+export function CreateTask({ onTaskCreated }) {
   return (
     <Box
       sx={{
@@ -10,9 +11,10 @@ export function CreateTask() {
         justifyContent: "space-between",
         gap: 2,
         px: 2,
-      }}>
-        <Button variant="contained" color="primary">New Task</Button>
-      <SearchAppBar/>
+      }}
+    >
+      <NewTaskForm onTaskCreated={onTaskCreated} />
+      <SearchAppBar />
     </Box>
   );
 }
