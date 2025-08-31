@@ -12,14 +12,19 @@ const theme = createTheme({
       // contrastText: will be calculated to contrast with palette.primary.main
     },
     secondary: {
-      main: "#E0C2FF",
-      light: "#F5EBFF",
+      main: "#004890ff",
+      light: "#5fa0e1ff",
       // dark: will be calculated from palette.secondary.main,
-      contrastText: "#47008F",
+      contrastText: "#ffffffff",
+    },
+    warning: {
+      main: "#ed0202ff",
+      light: "#ff0000ff",
+      dark: "#ff0000ff",
     },
     text: {
-      primary: "#ffffff"
-    }
+      primary: "#ffffff",
+    },
   },
   typography: {
     fontFamily: '"Helvetica Neue", Arial, sans-serif',

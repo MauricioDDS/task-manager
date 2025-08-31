@@ -10,12 +10,11 @@ export function SuperTask() {
         alignItems: "center",
         flexDirection: "column",
         width: "100%",
+        maxWidth: 500,
         gap: 3,
         p: 2,
       }}>
-      <Box sx={{ width: "100%", maxWidth: 370 }}>
         <CreateTask />
-      </Box>
         <Task />
         <Task />
     </Box>
