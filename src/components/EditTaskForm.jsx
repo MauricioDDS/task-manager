@@ -24,7 +24,7 @@ export default function EditTaskForm({ open, onClose, task, onSubmit }) {
         due_date: task.due_date || "",
         description: task.description || "",
       });
-      setDateError(""); // reset error cuando se abre con nueva tarea
+      setDateError("");
     }
   }, [task]);
 
@@ -50,7 +50,7 @@ export default function EditTaskForm({ open, onClose, task, onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (dateError) return; // 🚫 no envía si la fecha es inválida
+    if (dateError) return;
     if (onSubmit) onSubmit(form);
     onClose();
   };
@@ -74,7 +74,7 @@ export default function EditTaskForm({ open, onClose, task, onSubmit }) {
         >
           <TextField
             name="title"
-            label="Task Name"
+            label="Nombre de la Tarea"
             value={form.title}
             onChange={handleChange}
             required
@@ -83,7 +83,7 @@ export default function EditTaskForm({ open, onClose, task, onSubmit }) {
           />
           <TextField
             name="due_date"
-            label="Due Date"
+            label="Fecha Límite"
             type="date"
             InputLabelProps={{ shrink: true, style: { color: "white" } }}
             value={form.due_date}
@@ -95,7 +95,7 @@ export default function EditTaskForm({ open, onClose, task, onSubmit }) {
           />
           <TextField
             name="description"
-            label="Description"
+            label="Descripción"
             multiline
             rows={3}
             value={form.description}
@@ -106,14 +106,14 @@ export default function EditTaskForm({ open, onClose, task, onSubmit }) {
         </DialogContent>
         <DialogActions>
           <Button onClick={onClose} sx={{ color: "white" }}>
-            Cancel
+            Cancelar
           </Button>
           <Button
             type="submit"
             variant="contained"
             disabled={Boolean(dateError)}
           >
-            Save
+            Guardar
           </Button>
         </DialogActions>
       </form>

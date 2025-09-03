@@ -32,7 +32,7 @@ export default function NewTaskForm({ onTaskCreated }) {
     const selected = new Date(date);
 
     if (selected < today) {
-      setDateError("La fecha debe ser hoy o en el futuro");
+      setDateError("La fecha debe ser en el futuro");
     } else {
       setDateError("");
     }
@@ -68,14 +68,14 @@ export default function NewTaskForm({ onTaskCreated }) {
           sx: { bgcolor: "#003366", color: "white" },
         }}
       >
-        <DialogTitle>Create New Task</DialogTitle>
+        <DialogTitle>Crear Nueva Tarea</DialogTitle>
         <form onSubmit={handleSubmit}>
           <DialogContent
             sx={{ display: "flex", flexDirection: "column", gap: 2 }}
           >
             <TextField
               name="title"
-              label="Task Name"
+              label="Nombre de la Tarea"
               value={form.title}
               onChange={handleChange}
               required
@@ -84,7 +84,7 @@ export default function NewTaskForm({ onTaskCreated }) {
             />
             <TextField
               name="dueDate"
-              label="Due Date"
+              label="Fecha Limite"
               type="date"
               InputLabelProps={{ shrink: true, style: { color: "white" } }}
               InputProps={{ style: { color: "white" } }}
@@ -96,7 +96,7 @@ export default function NewTaskForm({ onTaskCreated }) {
             />
             <TextField
               name="description"
-              label="Description"
+              label="Descripción"
               multiline
               rows={3}
               value={form.description}
@@ -107,7 +107,7 @@ export default function NewTaskForm({ onTaskCreated }) {
           </DialogContent>
           <DialogActions>
             <Button onClick={() => setOpen(false)} sx={{ color: "white" }}>
-              Cancel
+              Cancelar
             </Button>
             <Button
               type="submit"
@@ -115,7 +115,7 @@ export default function NewTaskForm({ onTaskCreated }) {
               sx={{ bgcolor: "primary.main" }}
               disabled={Boolean(dateError)}
             >
-              Save
+              Guardar
             </Button>
           </DialogActions>
         </form>

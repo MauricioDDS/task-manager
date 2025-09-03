@@ -15,7 +15,7 @@ function App() {
           bgcolor : '#101316'
         }}>
         <Typography variant="h1" sx={{ my: 4, textAlign: "center", color: "white" }}>
-          ⚡ Task Manager ⚡
+          ⚡ Gestor de Tareas ⚡
         </Typography>
         <SuperTask />
       </Box>

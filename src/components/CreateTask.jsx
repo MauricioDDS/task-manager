@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import SearchAppBar from "./SearchAppBar";
 import NewTaskForm from "./NewTaskForm";
 
 export function CreateTask({ onTaskCreated }) {
