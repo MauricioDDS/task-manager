@@ -57,7 +57,7 @@ export default function NewTaskForm({ onTaskCreated }) {
   return (
     <>
       <Button variant="contained" onClick={() => setOpen(true)}>
-        New Task
+        Nueva Tarea
       </Button>
 
       <Dialog
@@ -68,7 +68,7 @@ export default function NewTaskForm({ onTaskCreated }) {
           sx: { bgcolor: "#003366", color: "white" },
         }}
       >
-        <DialogTitle>Crear Nueva Tarea</DialogTitle>
+        <DialogTitle>Nueva Tarea</DialogTitle>
         <form onSubmit={handleSubmit}>
           <DialogContent
             sx={{ display: "flex", flexDirection: "column", gap: 2 }}
