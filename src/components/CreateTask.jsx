@@ -14,7 +14,6 @@ export function CreateTask({ onTaskCreated }) {
       }}
     >
       <NewTaskForm onTaskCreated={onTaskCreated} />
-      <SearchAppBar />
     </Box>
   );
 }
